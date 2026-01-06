@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+<meta charset="UTF-8">
+<title>7</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<title>7</title>
-
 <style>
 html, body {
   margin: 0;
@@ -20,6 +19,13 @@ html, body {
   font-family: 'Orbitron', monospace;
   font-size: 96px;
 }
+a {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -28,14 +34,14 @@ html, body {
 
 <script>
 const target = new Date(2025, 0, 7, 2, 0, 0).getTime();
-
 const timer = document.getElementById("timer");
 
 function tick() {
   const diff = target - Date.now();
 
   if (diff <= 0) {
-    document.body.innerHTML = "";
+    // po osiągnięciu zera wyświetlamy link do Twittera
+    timer.innerHTML = '<a href="https://x.com/infekcik/status/2008575138380517536" target="_blank">Sezon 5 Odcinek 9 | Koniec?</a>';
     return;
   }
 
