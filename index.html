@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Conformity Gate</title>
+<title>7</title>
 
 <style>
 html, body {
@@ -14,8 +14,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: monospace;
-  font-size: 48px;
+  font-family: 'Orbitron', monospace;
+  font-size: 96px;
 }
 </style>
 </head>
@@ -24,15 +24,15 @@ html, body {
 <div id="timer">--:--:--</div>
 
 <script>
-const target = new Date("2026-01-10T00:00:00").getTime();
+const target = new Date(2025, 0, 7, 2, 0, 0).getTime();
+
+const timer = document.getElementById("timer");
 
 function tick() {
   const diff = target - Date.now();
 
   if (diff <= 0) {
     document.body.innerHTML = "";
-    // albo:
-    // window.location.href = "gate.html";
     return;
   }
 
